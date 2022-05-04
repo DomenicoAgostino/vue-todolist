@@ -19,3 +19,25 @@ body{
   margin: 30px;
   text-align: center;
 }
+
+.write-text {
+  text-align: center;
+}
+
+input {
+  background-color: aqua;
+  width: 250px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border-width: 5px;
+  margin-right: 20px;
+}
+
+button {
+  background-color: red;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border-width: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+}

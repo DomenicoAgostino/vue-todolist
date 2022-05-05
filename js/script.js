@@ -15,7 +15,10 @@ const app = new Vue({
 
   methods: {
     addList(){
-      this.lists.push(this.newList)
+      if(this.newList.length > 2){
+        this.lists.push(this.newList);
+        this.newList = '';
+      }
     }
   },
 })

@@ -19,26 +19,14 @@
     <h1 class="title">Vue to Do List</h1>
     
     <div class="write-text">
-      <input type="text" placeholder="Aggiungi testo">
+      <input v-model="newList" type="text" placeholder="Aggiungi testo">
       <button><i class="fa-solid fa-plus"></i></button>
     </div>
 
     <div class="container-list">
       <ul>
-        <li>
-          list
-          <i class="fa-solid fa-xmark"></i>
-        </li>
-        <li>
-          list
-          <i class="fa-solid fa-xmark"></i>
-        </li>
-        <li>
-          list
-          <i class="fa-solid fa-xmark"></i>
-        </li>
-        <li>
-          list
+        <li v-for="list in lists">
+          {{list}}
           <i class="fa-solid fa-xmark"></i>
         </li>
       </ul>

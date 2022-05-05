@@ -4,10 +4,12 @@ const app = new Vue({
   el: '#app',
 
   data:{
-    list:[
+    lists:[
       'Comprare acqua',
-      'Comprare olio auto',
+      'Comprare olio auto'
     ],
+
+    newList:''
   
   }
 })

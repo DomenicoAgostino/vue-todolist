@@ -20,7 +20,9 @@
     
     <div class="write-text">
       <input v-model="newList" type="text" placeholder="Aggiungi testo">
-      <button><i class="fa-solid fa-plus"></i></button>
+      <button @click="addList">
+        <i class="fa-solid fa-plus"></i>
+      </button>
     </div>
 
     <div class="container-list">

@@ -11,5 +11,11 @@ const app = new Vue({
 
     newList:''
   
-  }
+  },
+
+  methods: {
+    addList(){
+      this.lists.push(this.newList)
+    }
+  },
 })

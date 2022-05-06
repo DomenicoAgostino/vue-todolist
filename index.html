@@ -19,20 +19,22 @@
     <h1 class="title">Vue to Do List</h1>
     
     <div class="write-text">
-      <input 
-      v-model.trim="newList"
-      @keyup.enter="addList"
-      type="text" placeholder="Aggiungi testo (min. 3 lettere)">
+      <input v-model.trim="newList" @keyup.enter="addList" placeholder="Aggiungi testo nella lista(min 3 parole)" type="text">
       <button @click="addList">
         <i class="fa-solid fa-plus"></i>
       </button>
     </div>
 
     <div class="container-list">
-      <ul>
-        <li v-for="list in lists">
-          {{list}}
-          <i class="fa-solid fa-xmark"></i>
+      <ul v-if="lists.length > 0">
+        <li
+        @click="toggleDone(index)"
+        :class="{'done': list.done}"
+        v-for="(list, index) in lists">
+          <span>{{list.text}}</span>
+          <i 
+          @click.stop="removeList(index)"
+          class="fa-solid fa-xmark"></i>
         </li>
       </ul>
     </div>

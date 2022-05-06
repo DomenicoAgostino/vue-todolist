@@ -60,8 +60,15 @@ li{
   padding: 10px;
 }
 
+.container-list ul li i{
+  color: gray;
+  cursor: pointer;
+}
+
 .container-list ul li i:hover{
   color: red;
+}
 
-
+.done span{
+  text-decoration: line-through;
 }
